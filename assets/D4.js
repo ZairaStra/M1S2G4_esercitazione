@@ -69,20 +69,20 @@ console.log(boundary3);
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
-
+*/
 function epify(string) {
   const epicode = "EPICODE";
-  if (string.startsWith("EPICODE")) {
+  if (string.startsWith(epicode)) {
     return string;
   } else {
-    string.push(epicode);
+    return epicode + " " + string;
   }
 }
 const string1 = epify("Benvenuti in EPICODE");
 console.log(string1);
 const string2 = epify("EPICODE vi da il benvenuto");
 console.log(string2);
-*/
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -108,7 +108,13 @@ console.log(result);
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(string) {
+  return string.split("").reverse().join("");
+}
+const reverseString1 = reverseString("EPICODE");
+console.log(reverseString1);
+const reverseString2 = reverseString("Zaira Straticò");
+console.log(reverseString2);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
