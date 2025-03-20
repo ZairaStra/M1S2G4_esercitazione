@@ -121,7 +121,11 @@ console.log(reverseString2);
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(string) {
+  return string.charAt(0).toUpperCase();
+}
+const upperFirst1 = upperFirst("ciao ragazzi, come state?");
+console.log(upperFirst1);
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
