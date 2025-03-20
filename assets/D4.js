@@ -69,8 +69,18 @@ console.log(boundary3);
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(string) {
+  const epicode = "EPICODE";
+  if (string.startsWith("EPICODE")) {
+    return string;
+  } else {
+    string.push(epicode);
+  }
+}
+const string1 = "Benvenuti in EPICODE";
+console.log(string1);
+const string2 = "EPICODE vi da il benvenuto";
+console.log(string2);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
