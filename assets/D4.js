@@ -15,16 +15,17 @@ console.log(area1);
  la loro somma moltiplicata per tre.
 */
 function crazySum(number1, number2) {
+  const result = number1 + number2;
   if (number1 === number2) {
-    const result = (number1 + number2) * 3;
+    return result * 3;
   } else {
-    const result = number1 + number2;
+    return result;
   }
   return result;
 }
-const crazySum1 = (7, 2);
+const crazySum1 = crazySum(7, 2);
 console.log(crazySum1);
-const crazySum2 = (6, 6);
+const crazySum2 = crazySum(6, 6);
 console.log(crazySum2);
 
 /* ESERCIZIO 3
@@ -40,9 +41,9 @@ function crazyDiff(firstNumb, secondNumb) {
     return result;
   }
 }
-const crazyDiff1 = (39, 19);
+const crazyDiff1 = crazyDiff(39, 19);
 console.log(crazyDiff1);
-const crazyDiff2 = (6, 19);
+const crazyDiff2 = crazyDiff(6, 19);
 console.log(crazyDiff2);
 
 /* ESERCIZIO 4
@@ -57,18 +58,18 @@ function boundary(n) {
     return (result = false);
   }
 }
-const boundary1 = 6;
+const boundary1 = boundary(6);
 console.log(boundary1);
-const boundary2 = 87;
+const boundary2 = boundary(87);
 console.log(boundary2);
-const boundary3 = 400;
+const boundary3 = boundary(400);
 console.log(boundary3);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
-*/
+
 function epify(string) {
   const epicode = "EPICODE";
   if (string.startsWith("EPICODE")) {
@@ -77,17 +78,31 @@ function epify(string) {
     string.push(epicode);
   }
 }
-const string1 = "Benvenuti in EPICODE";
+const string1 = epify("Benvenuti in EPICODE");
 console.log(string1);
-const string2 = "EPICODE vi da il benvenuto";
+const string2 = epify("EPICODE vi da il benvenuto");
 console.log(string2);
-
+*/
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(n) {
+  const result1 = n % 3;
+  const result2 = n % 7;
+  if (result1 === 0 && result2 === 0) {
+    result = true;
+    return result;
+  } else {
+    result = false;
+    return result;
+  }
+}
+const check3and7One = check3and7(21);
+console.log(result);
+const check3and7Two = check3and7(69);
+console.log(result);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
